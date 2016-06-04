@@ -38,6 +38,11 @@ class WelcomeController extends Controller {
 		return view('coffee');
 	}
 
+	public function adminer(){
+		return view('adminer');
+	}
+
+
 
 
 }
