@@ -11,15 +11,15 @@
 |
 */
 
-// 認證路由...
-Route::get('login', function(){
+
+Route::get('/'		 , 'WelcomeController@index' );
+Route::get('/login', function(){
 	return '123';
 });
 Route::post('auth/login', 'Auth\AuthController@validator');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
 
-Route::get('/'		 , 'WelcomeController@index' );
 Route::get('coffee' , 'WelcomeController@coffee');
 
 

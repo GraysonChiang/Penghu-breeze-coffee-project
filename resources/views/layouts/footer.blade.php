@@ -26,7 +26,7 @@
 									<li class="social-facebook"><a href="https://www.facebook.com/Islandbreezecoffee/timeline"><i class="fa fa-facebook"></i></a></li>
 							</ul>						
 						</div>
-						<p>澎湖縣馬公市中興里民生路52號<a href="{{ url('/') }}">login</a></br>
+						<p>澎湖縣馬公市中興里民生路52號<a href="{{ url('/login') }}">login</a></br>
 						&copy;Copyright 2015 - Valera. All rights reserved.  | Designed by <a href="http://bootstraptaste.com">BootstrapTaste</a> </p>
 					</div>
 				</div>
