@@ -12,7 +12,9 @@
 */
 
 // 認證路由...
-Route::get('login', 'Auth\AuthController@getLogin');
+Route::get('login', function(){
+	return '123';
+});
 Route::post('auth/login', 'Auth\AuthController@validator');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
