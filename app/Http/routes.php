@@ -11,5 +11,18 @@
 |
 */
 
+// 認證路由...
+Route::get('login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@validator');
+Route::get('logout', 'Auth\AuthController@getLogout');
+
+
+
 Route::get('/'		 , 'WelcomeController@index' );
 Route::get('coffee' , 'WelcomeController@coffee');
+
+
+Route::get('admin' , 'adminController@admin');
+Route::get('admin/people' , 'adminController@adminpeople');
+Route::post('admin/edit/{id}' , 'adminController@EditMemberdata');
+

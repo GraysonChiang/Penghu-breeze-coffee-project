@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Auth;
 use App\User;
+use App\news;
 use Validator;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+
 
 class AuthController extends Controller
 {
@@ -40,20 +44,60 @@ class AuthController extends Controller
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
 
+
+
+    public  function getLogin(){
+
+        return view('auth.login');
+
+    }
+    
+    public   function postLogin(){
+
+        return 'postLogin';
+
+    }
+
+
     /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function validator(Request $request)
     {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
-        ]);
+
+
+       $this -> validate($request , [
+            'name'     => 'required|max:255',
+            'password' => 'required',
+            ]);
+
+        $name = $request -> input('name');
+        $pass = $request -> input('password');
+
+
+        if(Auth::attempt([ 'name' => $name,'password' => $pass ]))
+        {
+            Auth::logout(); 
+            return redirect('admin');
+        }
+        else
+        {
+            return redirect('/');
+        }
+
     }
+
+    public function getLogout(){
+
+        Auth::logout(); 
+        
+        return redirect('/');
+
+    }
+
 
     /**
      * Create a new user instance after a valid registration.
@@ -61,12 +105,12 @@ class AuthController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
-    }
+    // protected function create(array $data)
+    // {
+    //     return User::create([
+    //         'name' => $data['name'],
+    //         'email' => $data['email'],
+    //         'password' => bcrypt($data['password']),
+    //     ]);
+    // }
 }

@@ -7,7 +7,7 @@
                                           <div class="col-md-2 mob-logo">
                                                 <div class="row">
                                                       <div class="site-logo">
-                                                          <a href="{{ url('/') }}"><img src="img/logo.jpg" width="120" height="40" alt="" /></a>
+                                                          <a href="{{ url('/') }}"><img src="{{ asset('img/logo.jpg') }}" width="120" height="40" alt="" /></a>
                                                       </div>
                                                 </div>
                                           </div>

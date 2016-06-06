@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use App\news;
+use App\User;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -30,17 +33,24 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('index');
+		$user = User::all() ;
+		$data=['tasks'=>$user]; 
+		return view('index' , $data);
 	}
 
 	public function coffee()
 	{
+
+
 		return view('coffee');
 	}
+	public function admin(){
 
-	public function adminer(){
-		return view('adminer');
+		return view('admin');
 	}
+
+
+
 
 
 
