@@ -12,10 +12,9 @@
 */
 
 // 認證路由...
-Route::get('admin/login', 'Auth\AuthController@getLogin');
+Route::get('login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@validator');
 Route::get('logout', 'Auth\AuthController@getLogout');
-//111111111
 
 
 Route::get('/'		 , 'WelcomeController@index' );
