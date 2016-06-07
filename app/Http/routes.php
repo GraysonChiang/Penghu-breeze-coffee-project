@@ -13,9 +13,7 @@
 
 
 Route::get('/'		 , 'WelcomeController@index' );
-Route::get('/test', function(){
-	return '123';
-});
+Route::get('/login'	 , 'Auth\AuthController@getLogin' );
 Route::post('auth/login', 'Auth\AuthController@validator');
 Route::get('logout', 'Auth\AuthController@getLogout');
 

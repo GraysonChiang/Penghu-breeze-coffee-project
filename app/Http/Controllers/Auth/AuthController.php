@@ -47,16 +47,11 @@ class AuthController extends Controller
 
 
     public  function getLogin(){
-        return "123";
-        // return view('auth.login');
+        // return "123";
 
+        return view('auth.login');
     }
-    
-    public   function postLogin(){
 
-        return 'postLogin';
-
-    }
 
 
     /**
