@@ -11,9 +11,18 @@
 |
 */
 
+Route::get('/index'	 , function(){
+	return view('layouts/index');
+} );
 
 Route::get('/'		 , 'WelcomeController@index' );
 Route::get('/login'	 , 'Auth\AuthController@getLogin' );
+Route::get('/logout'	 , 'Auth\AuthController@getLogout' );
+
+
+
+
+
 Route::post('auth/login', 'Auth\AuthController@validator');
 Route::get('logout', 'Auth\AuthController@getLogout');
 

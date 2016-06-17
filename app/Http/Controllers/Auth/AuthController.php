@@ -32,7 +32,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    // protected $redirectTo = '/';
 
     /**
      * Create a new authentication controller instance.
@@ -47,7 +47,12 @@ class AuthController extends Controller
 
 
     public  function getLogin(){
-        // return "123";
+
+        // Auth::logout(); 
+
+
+        // return redirect('/');
+
 
         return view('auth.login');
     }
@@ -75,7 +80,7 @@ class AuthController extends Controller
 
         if(Auth::attempt([ 'name' => $name,'password' => $pass ]))
         {
-            Auth::logout(); 
+            // Auth::logout(); 
             return redirect('admin');
         }
         else

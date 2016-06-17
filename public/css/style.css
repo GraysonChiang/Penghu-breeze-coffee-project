@@ -1182,12 +1182,12 @@ form.search-form input:focus {
 ============================ */
 
 footer {
-    background-color: #404040;
+    background-color: #554132;
 }
 
 footer {
 	text-align: center;
-	padding: 50px 0 ;
+	padding: 10px 0 ;
 	
 }
 
@@ -1525,7 +1525,7 @@ Parallax
 
 #map-btn1-div {
 	width: 100%;
-	background: #555;
+	background: #A17B5F;
 }
 
 a.gmap-btn.btn-show {

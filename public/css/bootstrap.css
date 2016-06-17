@@ -4368,7 +4368,8 @@ a.list-group-item.active > .badge,
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-image: url('../img/slides/1.jpg')  ;
+
 }
 .jumbotron h1,
 .jumbotron .h1 {

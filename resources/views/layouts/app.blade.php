@@ -7,8 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Shooting the Breeze</title>
-    
-    <!-- css -->
     <link href="{{asset('font-awesome/css/font-awesome.min.css' )}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('css/nivo-lightbox.css' )}}" rel="stylesheet" />
     <link href="{{asset('css/nivo-lightbox-theme/default/default.css' )}}" rel="stylesheet" type="text/css" />
@@ -18,13 +16,14 @@
     <link href="{{asset('css/animate.css' )}}" rel="stylesheet" />
     <link href="{{asset('color/default.css' )}}" rel="stylesheet">
     <link href="{{asset('css/simple-sidebar.css')}}" rel="stylesheet">
-    <link href="{{asset('css/bootstrap.min.css' )}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/bootstrap.css' )}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/style.css' )}}" rel="stylesheet">
-
-
 </head>
-
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+
+
+
 
 
 @yield('content')

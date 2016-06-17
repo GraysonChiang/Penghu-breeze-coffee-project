@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 @section('content')
-@include('layouts.navigation')
+@include('layouts.navigation') 
 
 <a href="#menu-toggle" class="btn btn-skin" id="menu-toggle">
     <i class="glyphicon glyphicon-align-justify"></i></a>

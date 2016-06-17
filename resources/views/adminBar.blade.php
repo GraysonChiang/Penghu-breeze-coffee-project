@@ -23,7 +23,7 @@
                     <a href="#">Services</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="{{ url('logout') }}">logout</a>
                 </li>
             </ul>
         </div>
