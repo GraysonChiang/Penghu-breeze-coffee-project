@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             'email' => str_random(10).'@gmail.com',
             'password' => bcrypt('123'),
             'visble' => 0
-        ]);     
+         ]);     
+
     	}
      }
 }
