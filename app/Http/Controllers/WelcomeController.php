@@ -37,6 +37,7 @@ class WelcomeController extends Controller {
 		$user = User::all() ;
 		$data=['tasks'=>$user]; 
 		return view('index' , $data);
+
 	}
 
 	public function coffee()
